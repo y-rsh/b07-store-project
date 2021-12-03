@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">My First App</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="app_name">Grocerytron-9000</string>
+    <string name="who_are_you">Who Are You</string>
+    <string name="enter_user">Enter Username</string>
+    <string name="login">LOGIN</string>
+    <string name="no_account_register_here">No Account? Register Here</string>
 </resources>
