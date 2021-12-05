@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_shop_main">Shop_main</string>
+
+    <string name="home">Home</string>
+    <string name="shoplist_title">Shop List</string>
+    <string name="logout_message">Successfully Logged Out!</string>
+    <string name="home_title">Account Home</string>
+    <string name="checkorder">Check Past Orders</string>
+    <string name="productlist_title">Products Available for</string>
+    <string name="productname">Product name:</string>
+    <string name="brandname">Brand name:</string>
+    <string name="weight">Weight:</string>
+    <string name="price">Price:</string>
+    <string name="unitprice">Unit Price:</string>
+    <string name="quantity">Quantity:</string>
+    <string name="addcart">Add to Cart</string>
+    <string name="product_details">Product Details</string>
+    <string name="pastorder_title">Order History</string>
+    <string name="cart_title">My Cart</string>
+    <string name="productadded_title">Product added to cart!</string>
+    <string name="to_shop">Go Shopping</string>
+    <string name="cont_shop">Continue Shopping</string>
+    <string name="to_checkout">View Cart / Checkout</string>
+    <string name="netcost">Total Price:</string>
+    <string name="order_title">My Cart</string>
+    <string name="cart_instructions">Click on each item to make changes.</string>
+    <string name="cart_config_title">Product in cart:</string>
+    <string name="quantity_current">Current Quantity:</string>
+    <string name="changequantity_title">Update quantity to:</string>
+    <string name="quantity_update">Confirm</string>
+    <string name="deletion">Delete Product from Cart:</string>
+    <string name="deletebutton">Confirm Deletion</string>
+    <string name="quantityupdate_success">Quantity Successfully Updated!</string>
+    <string name="deletion_success">Successfully Deleted Product from Cart!</string>
+    <string name="uptocart">Back to Cart</string>
+    <string name="do_order">Confirm Order</string>
+    <string name="orderid">Order ID:</string>
+    <string name="orderdetail">Order Details for Order ID</string>
+    <string name="orderdetail_title">Products Ordered:</string>
+    <string name="stats">Status:</string>
+    <string name="back_orderhist">Back to Order History</string>
+    <string name="checkout_complete">Your order is sent successfully!</string>
+    <string name="gohome">Back to Home</string>
+    <string name="backtoshoplist">Back to Shop List</string>
+    <string name="backtoproductlist">Back to Product List</string>
+    <string name="to_logout">Log Out</string>
+    <string name="re_login">Log In Again</string>
+
+    <string-array name="quantity_num">
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+        <item> 7 </item>
+        <item> 8 </item>
+        <item> 9 </item>
+        <item> 10 </item>
+        <item> 11 </item>
+        <item> 12 </item>
+        <item> 13 </item>
+        <item> 14 </item>
+        <item> 15 </item>
+        <item> 16 </item>
+        <item> 17 </item>
+        <item> 18 </item>
+        <item> 19 </item>
+        <item> 20 </item>
+    </string-array>
+
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_logged_out">Logged_out</string>
+</resources>
