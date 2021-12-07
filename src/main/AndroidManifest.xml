@@ -36,33 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.b07storeapp.AddItem"
-            android:exported="false" />
-        <activity
-            android:name="com.example.b07storeapp.EditSingleItem"
-            android:exported="false" />
-        <activity
-            android:name="com.example.b07storeapp.EditingItems"
-            android:exported="false" />
-        <activity
-            android:name="com.example.b07storeapp.DisplayMessageActivity"
-            android:parentActivityName="com.example.b07storeapp.EditItems">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.b07storeapp.EditItems" />
-        </activity>
-        <activity
-            android:name="com.example.b07storeapp.EditItems"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+       
     </application>
 
 </manifest>
