@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class owner_login extends AppCompatActivity implements LoginContract.View {
-
+    public static final String username = "com.example.B07StoreApp.MESSAGE";
 
     private LoginContract.Presenter presenter;
 
@@ -30,7 +30,10 @@ public class owner_login extends AppCompatActivity implements LoginContract.View
 
 
     public void startSuccessfulLoginActivity() {
-        Intent intent = new Intent(this, LoginSuccess.class);
+        Intent intent = new Intent(this, OwnerActivity.class);
+        EditText editText = (EditText) findViewById(R.id.editTextTextPersonName3);
+        String user =editText.getText().toString();
+        intent.putExtra(username, user);
         startActivity(intent);
     }
 

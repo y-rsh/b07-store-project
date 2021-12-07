@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class customer_register extends AppCompatActivity implements RegisterContract.View {
-
+    public static final String username = "com.example.B07StoreApp.MESSAGE";
     private RegisterContract.Presenter presenter;
 
     @Override
@@ -45,7 +45,10 @@ public class customer_register extends AppCompatActivity implements RegisterCont
 
     @Override
     public void startSuccessfulRegistrationActivity() {
-        Intent intent = new Intent(this, RegisterSuccess.class);
+        Intent intent = new Intent(this, customer_home.class);
+        EditText editText = (EditText) findViewById(R.id.editTextTextPersonName2);
+        String user =editText.getText().toString();
+        intent.putExtra(username, user);
         startActivity(intent);
     }
 
