@@ -9,6 +9,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.B07StoreApp">
+        
+        <activity
+            android:name="com.example.b07storeapp.orderhistory_details"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.Item_deleted"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.Cart_quantity_updated"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.Cart_itemconfigure"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.product_details"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.past_orderlist"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.product_list"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.Checkout_finish"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.Checkout"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.product_added"
+            android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.Shop_list"
+            android:parentActivityName="com.example.b07storeapp.customer_home">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.b07storeapp.customer_home" />
+        </activity>
+        <activity
+            android:name="com.example.b07storeapp.customer_home"
+            android:exported="false">
+        </activity>
+        
+        
+        
         <activity
             android:name="com.example.b07storeapp.AddItem"
             android:exported="false" />
