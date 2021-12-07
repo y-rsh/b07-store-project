@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.owner_ordersactivity.R;
 
 import java.util.List;
 
