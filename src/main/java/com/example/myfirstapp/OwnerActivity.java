@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.owner_ordersactivity.R;
 
 import java.io.Serializable;
 
