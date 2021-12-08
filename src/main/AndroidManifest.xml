@@ -55,6 +55,20 @@
         </activity>
         
         
+        <activity
+            android:name=".Mark_DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mark_OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Order_DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View_OrderHistory"
+            android:exported="false" />
+        
+        
         
         <activity
             android:name="com.example.b07storeapp.AddItem"
