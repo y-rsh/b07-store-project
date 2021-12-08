@@ -86,7 +86,7 @@
     <string name="items_">Items:</string>
     <string name="total_price">Total Price:</string>
     <string name="order_detail">ORDER DETAIL</string>
-    <string name="orderid">ORDERID</string>
+   
     <string name="mark_orders_ready">MARK ORDERS READY</string>
     <string name="welcome">Welcome,</string>
     <string name="store_name">Store Name:</string>
