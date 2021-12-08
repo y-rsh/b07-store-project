@@ -56,17 +56,20 @@
         
         
         <activity
-            android:name=".Mark_DetailActivity"
+            android:name="com.example.b07storeapp.Mark_DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Mark_OrdersActivity"
+            android:name="com.example.b07storeapp.Mark_OrdersActivity"
             android:exported="false" />
         <activity
-            android:name=".Order_DetailActivity"
+            android:name="com.example.b07storeapp.Order_DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".View_OrderHistory"
+            android:name="com.example.b07storeapp..View_OrderHistory"
             android:exported="false" />
+        <activity
+            android:name="com.example.b07storeapp.OwnerActivity"
+            android:exported="false">
         
         
         
