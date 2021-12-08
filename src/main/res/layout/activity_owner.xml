@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.b07storeapp.OwnerActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="276dp"
+        android:onClick="view_order"
+        android:text="@string/order_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="372dp"
+        android:onClick="mark_orders"
+        android:text="@string/mark_orders_ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvwelcome"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/welcome"
+        android:textColor="#3F51B5"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Owner_acticity_onerName"
+        android:layout_width="169dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/ownername"
+        android:textColor="#9C27B0"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/tvwelcome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcom_name"
+        android:layout_width="113dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="73dp"
+        android:text="@string/store_name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Owner_acticity_onerName" />
+
+    <TextView
+        android:id="@+id/welcom_storename"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="4dp"
+        android:text="NAME"
+        android:textColor="#454245"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/welcom_name"
+        app:layout_constraintTop_toBottomOf="@+id/Owner_acticity_onerName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
