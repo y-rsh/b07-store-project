@@ -33,6 +33,7 @@ public class OwnerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner);
         list = new ArrayList<>();
+
         Intent intent = getIntent();
         user = intent.getStringExtra(user);
         database = FirebaseDatabase.getInstance().getReference("StoreList");
@@ -41,26 +42,22 @@ public class OwnerActivity extends AppCompatActivity {
         tvStore = (TextView) findViewById(R.id.welcom_storename);
         tvName.setText(user);
 
-
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    Store store = dataSnapshot.getValue(Store.class);
-                    list.add(store);
-                }
+                    Store store_temp = dataSnapshot.getValue(Store.class);
+                    if (store_temp.storename == user){
+                        store = store_temp;
+                    }
+               }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+        tvStore.setText(store.storename);
 
-        for (Store i : list){
-            if (i.username == user)
-                store = i;
-                tvStore.setText(store.getStorename());
-        }
-    
     }
 
     public void view_order(View view) {
