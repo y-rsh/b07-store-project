@@ -58,8 +58,9 @@ public class OwnerActivity extends AppCompatActivity {
         for (Store i : list){
             if (i.username == user)
                 store = i;
+                tvStore.setText(store.getStorename());
         }
-        tvName.setText(store.storename);
+    
     }
 
     public void view_order(View view) {
