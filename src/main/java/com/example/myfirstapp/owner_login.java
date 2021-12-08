@@ -33,7 +33,7 @@ public class owner_login extends AppCompatActivity implements LoginContract.View
         Intent intent = new Intent(this, OwnerActivity.class);
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName3);
         String user =editText.getText().toString();
-        intent.putExtra(username, user);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 
