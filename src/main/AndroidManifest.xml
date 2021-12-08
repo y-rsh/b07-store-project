@@ -69,7 +69,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.b07storeapp.OwnerActivity"
-            android:exported="false">
+            android:exported="false"/>
         
         
         
