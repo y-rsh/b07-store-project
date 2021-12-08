@@ -76,6 +76,22 @@
     <string name="backtoproductlist">Back to Product List</string>
     <string name="to_logout">Log Out</string>
     <string name="re_login">Log In Again</string>
+ 
+    <string name="order_history">Order History</string>
+    <string name="textview">TextView</string>
+    <string name="Price">price</string>
+    <string name="numbers_of_incomplete_orders">Numbers of incomplete orders:</string>
+    <string name="completed">Completed</string>
+    <string name="order_status">Order Status:</string>
+    <string name="items_">Items:</string>
+    <string name="total_price">Total Price:</string>
+    <string name="order_detail">ORDER DETAIL</string>
+    <string name="orderid">ORDERID</string>
+    <string name="mark_orders_ready">MARK ORDERS READY</string>
+    <string name="welcome">Welcome,</string>
+    <string name="store_name">Store Name:</string>
+    <string name="mark_as_completed">Mark As Completed</string>
+    <string name="ownername">OwnerName</string>
 
     <string-array name="quantity_num">
         <item> 1 </item>
