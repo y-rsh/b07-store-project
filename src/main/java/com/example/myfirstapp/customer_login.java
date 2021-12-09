@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,7 +33,7 @@ public class customer_login extends AppCompatActivity implements LoginContract.V
         Intent intent = new Intent(this, customer_home.class);
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
         String user =editText.getText().toString();
-        intent.putExtra(username, user);
+        intent.putExtra("username", user);
         startActivity(intent);
     }
 

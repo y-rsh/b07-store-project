@@ -16,7 +16,7 @@ public class EditItems extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.items_edit);
-        this.storeName = "storename_1";
+        this.storeName = getIntent().getStringExtra("storename");
 
         //new DataAccess();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.itemrecycler1);

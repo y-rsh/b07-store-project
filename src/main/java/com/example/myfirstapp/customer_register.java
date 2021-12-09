@@ -48,7 +48,7 @@ public class customer_register extends AppCompatActivity implements RegisterCont
         Intent intent = new Intent(this, customer_home.class);
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName2);
         String user =editText.getText().toString();
-        intent.putExtra(username, user);
+        intent.putExtra("username", user);
         startActivity(intent);
     }
 

@@ -46,10 +46,11 @@ public class owner_register extends AppCompatActivity implements RegisterContrac
 
     @Override
     public void startSuccessfulRegistrationActivity() {
-        Intent intent = new Intent(this, OwnerActivity.class);
+        Intent intent = new Intent(this, store_setup.class);
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName4);
         String user =editText.getText().toString();
-        intent.putExtra(username, user);
+        intent.putExtra("username", user);
+
         startActivity(intent);
 
     }

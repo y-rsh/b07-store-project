@@ -16,7 +16,7 @@ public class customer_home extends AppCompatActivity {
         setContentView(R.layout.activity_customer_home);
 
 
-        username = getIntent().getStringExtra(username);
+        username = getIntent().getStringExtra("username");
 
 
         Button goshop = findViewById(R.id.goshop);

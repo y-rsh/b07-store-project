@@ -92,6 +92,23 @@ public class Checkout extends AppCompatActivity implements Checkout_Recyclerview
             }
         });
 
+        DatabaseReference ref3 = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference subref3 = ref3.child("Users").child("Customers").child(username);
+        subref3.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.child("Number of Past Orders").exists()) {
+                    subref3.child("Number of Past Orders").setValue("0");
+
+
+                }
+            }
+
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
 
 
         Button doorder = findViewById(R.id.finishorder);
@@ -115,22 +132,22 @@ public class Checkout extends AppCompatActivity implements Checkout_Recyclerview
                         String orderid = username + newordernum;
                         assert storename != null;
 
-                        if(!snapshot.child("StoreList").child(storename).child("data").child("orders").exists()){
-                            reference2.child("StoreList").child(storename).child("data").child("orders").child("Number of incomplete orders").setValue("1");
+                        if(!snapshot.child("StoreList").child(storename).child("data").child("Number of incomplete orders").exists()){
+                            reference2.child("StoreList").child(storename).child("data").child("Number of incomplete orders").setValue("1");
                         }
                         else{
-                            String incomplete_orders = (String)snapshot.child("StoreList").child(storename).child("data").child("orders")
+                            String incomplete_orders = (String)snapshot.child("StoreList").child(storename).child("data")
                                     .child("Number of incomplete orders").getValue();
                             assert incomplete_orders != null;
                             int incomp_ordernum = (int)Double.parseDouble(incomplete_orders);
                             String new_incompordernum = String.valueOf(incomp_ordernum+1);
-                            reference2.child("StoreList").child(storename).child("data").child("orders").child("Number of incomplete orders").setValue(new_incompordernum);
+                            reference2.child("StoreList").child(storename).child("data").child("Number of incomplete orders").setValue(new_incompordernum);
 
                         }
 
                         DatabaseReference subref1 = reference2.child("StoreList").child(storename).child("data");
 
-
+                        subref1.child("orders").child(orderid).child("ordered user").setValue(username);
                         subref1.child("orders").child(orderid).child("status").setValue("Preparing");
                         subref1.child("orders").child(orderid).child("order id").setValue(orderid);
                         subref1.child("orders").child(orderid).child("total price").setValue(displaycost);
@@ -140,6 +157,7 @@ public class Checkout extends AppCompatActivity implements Checkout_Recyclerview
 
                         for(int j = 0; j < unitprices_list.length; j++){
                             subref1.child("orders").child(orderid).child("items").child(productname_list[j]).child("name").setValue(productname_list[j]);
+                            subref1.child("orders").child(orderid).child("items").child(productname_list[j]).child("unit price").setValue(unitprices_list[j]);
                             subref1.child("orders").child(orderid).child("items").child(productname_list[j]).child("quantity").setValue(quantities_list[j]);
                         }
                         DatabaseReference subref2 = reference2.child("Users").child("Customers").child(username);
@@ -211,4 +229,6 @@ public class Checkout extends AppCompatActivity implements Checkout_Recyclerview
 
 
     }
+
+
 }

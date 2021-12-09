@@ -1,5 +1,6 @@
 package com.example.b07storeapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,8 +9,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Objects;
+
 public class owner_login extends AppCompatActivity implements LoginContract.View {
-    public static final String username = "com.example.B07StoreApp.MESSAGE";
+    //public static final String username = "com.example.B07StoreApp.MESSAGE";
 
     private LoginContract.Presenter presenter;
 
@@ -30,11 +39,24 @@ public class owner_login extends AppCompatActivity implements LoginContract.View
 
 
     public void startSuccessfulLoginActivity() {
-        Intent intent = new Intent(this, OwnerActivity.class);
+        Intent intent = new Intent(this, owner_home.class);
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName3);
         String user =editText.getText().toString();
-        intent.putExtra("user", user);
-        startActivity(intent);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users").child("Owners").child(user);
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String storename = Objects.requireNonNull(snapshot.child("Store Name").getValue()).toString();
+                intent.putExtra("storename", storename);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     public void handleClick(View view){

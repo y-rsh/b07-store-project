@@ -17,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class orderhistory_details extends AppCompatActivity {
@@ -34,6 +36,9 @@ public class orderhistory_details extends AppCompatActivity {
 
         String selectedid = getIntent().getStringExtra("orderid");
         username = getIntent().getStringExtra("username");
+
+        TextView idview = findViewById(R.id.orderdetail_id);
+        idview.setText(selectedid);
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         DatabaseReference subref = reference.child("Users").child("Customers").child(username)
@@ -59,7 +64,7 @@ public class orderhistory_details extends AppCompatActivity {
 
                 }
 
-                RecyclerView prodlist_view = findViewById(R.id.orderhist_prodlist);
+                RecyclerView prodlist_view = findViewById(R.id.orderitem_view);
                 LinearLayoutManager layoutManager = new LinearLayoutManager(orderhistory_details.this);
                 layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
                 prodlist_view.setLayoutManager(layoutManager);
