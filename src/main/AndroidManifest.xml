@@ -9,40 +9,60 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.B07StoreApp">
-        
         <activity
-            android:name="com.example.b07storeapp.orderhistory_details"
+            android:name=".owner_order_details"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Item_deleted"
+            android:name=".order_full_list"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Cart_quantity_updated"
+            android:name=".orderstatus_updatecomplete"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Cart_itemconfigure"
+            android:name=".update_order_status_individual"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.product_details"
+            android:name=".update_order_status"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.past_orderlist"
+            android:name=".owner_home"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.product_list"
+            android:name=".orderhistory_details"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Checkout_finish"
+            android:name=".Item_deleted"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Checkout"
+            android:name=".Cart_quantity_updated"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.product_added"
+            android:name=".Cart_itemconfigure"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Shop_list"
-            android:parentActivityName="com.example.b07storeapp.customer_home">
+            android:name=".product_details"
+            android:exported="false" />
+        <activity
+            android:name=".past_orderlist"
+            android:exported="false" />
+        <activity
+            android:name=".product_list"
+            android:exported="false" />
+        <activity
+            android:name=".Checkout_finish"
+            android:exported="false" />
+        <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".logged_out"
+            android:exported="false"/>
+        <activity
+            android:name=".product_added"
+            android:exported="false" />
+        <activity
+            android:name=".Shop_list"
+            android:parentActivityName=".customer_home">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -50,41 +70,35 @@
                 android:value="com.example.b07storeapp.customer_home" />
         </activity>
         <activity
-            android:name="com.example.b07storeapp.customer_home"
-            android:exported="false">
-        </activity>
-        
-        
-        <activity
-            android:name="com.example.b07storeapp.Mark_DetailActivity"
+            android:name=".customer_home"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Mark_OrdersActivity"
+            android:name=".Mark_DetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.Order_DetailActivity"
+            android:name=".Mark_OrdersActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp..View_OrderHistory"
+            android:name=".Order_DetailActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.OwnerActivity"
-            android:exported="false"/>
-        
-        
-        
-        <activity
-            android:name="com.example.b07storeapp.AddItem"
+            android:name=".View_OrderHistory"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.EditSingleItem"
+            android:name=".OwnerActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.EditingItems"
+            android:name=".AddItem"
             android:exported="false" />
         <activity
-            android:name="com.example.b07storeapp.DisplayMessageActivity"
-            android:parentActivityName="com.example.b07storeapp.EditItems">
+            android:name=".EditSingleItem"
+            android:exported="false" />
+        <activity
+            android:name=".EditingItems"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:parentActivityName=".EditItems">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -92,14 +106,7 @@
                 android:value="com.example.b07storeapp.EditItems" />
         </activity>
         <activity
-            android:name="com.example.b07storeapp.EditItems"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".RegisterSuccess"
-            android:exported="false" />
-        <activity
-            android:name=".LoginSuccess"
+            android:name=".EditItems"
             android:exported="false" />
         <activity
             android:name=".owner_register"
@@ -114,6 +121,9 @@
             android:name=".customer_login"
             android:exported="false" />
         <activity
+            android:name=".store_setup"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -122,7 +132,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       
     </application>
 
 </manifest>
